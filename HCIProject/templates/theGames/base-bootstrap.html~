@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Rango</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="{{STATIC_URL}}bootstrap/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+         @media (max-width: 980px) {
+                /* Enable use of floated navbar text */
+                .navbar-text.pull-right {
+                  float: none;
+                  padding-left: 5px;
+                  padding-right: 5px;
+                }
+              }
+    </style>
+    <link href="{{STATIC_URL}}bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="/theGames/">theGames</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+
+                                <li><a href="/theGames/">Home</a></li>
+                                        <li><a href="/theGames/events/">Events</a></li>
+                                        <li><a href="/theGames/updates/" >Updates</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <div class="well sidebar-nav">
+                 {% block sidebar2 %}
+                            {% endblock %}
+          </div><!--/.well -->
+        </div><!--/span-->
+        <div class="span9">
+          <div class="hero-unit">
+                        {% block content %}
+                            {% endblock %}
+          </div>
+        </div><!--/span-->
+      </div><!--/row-->
+
+      <hr>
+
+      <footer>
+        <p>&copy; How to Tango with Django 2013</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://twitter.github.com/bootstrap/assets/js/jquery.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets//js/bootstrap-transition.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets//js/bootstrap-alert.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets//js/bootstrap-modal.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets//js/bootstrap-dropdown.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets//js/bootstrap-scrollspy.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets//js/bootstrap-tab.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets//js/bootstrap-tooltip.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets//js/bootstrap-popover.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets//js/bootstrap-button.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets//js/bootstrap-collapse.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets//js/bootstrap-carousel.js"></script>
+    <script src="http://twitter.github.com/bootstrap/assets//js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>
+
+It takes a bit of time to wrangle with the particular CSS Toolkit that you use - but once you’ve got it up and running it is usually fairly straightforward to customize.
+
+In theGames/index.html update the sidebar to include the Bootstrap specific classes when presenting categories:
+
+{% block sidebar %}
+
+
+<UL class="nav nav-list">
+        <LI class="nav-header">Event List</LI>
+        {% if event_list %}
+                {% for event in event_list %}
+                       <LI>{{ event.name }}</A></LI>
+                {% endfor %}
+        {% else %}
+                <LI>No Event at present.</LI>
+        {% endif %}
+</UL>
+
+{% endblock %}
+
+

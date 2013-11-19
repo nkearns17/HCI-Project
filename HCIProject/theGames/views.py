@@ -1,6 +1,7 @@
 from django.http import HttpResponse
-from django.template import RequestContext
+from django.template import RequestContext, loader
 from django.shortcuts import render_to_response
+from theGames.models import Event, specificEvent
 
 def index(request):
     # Request the context of the request.
@@ -17,4 +18,12 @@ def index(request):
     return render_to_response('theGames/index.html', context_dict, context)
 
 def events(request):
-	return HttpResponse("This is the events page. <br> <a href='/theGames/'>Home</a>")
+	template = loader.get_template('theGames/events.html')
+
+	#request all events
+	event_list = Event.objects.all()
+
+	#put the data into the context
+	context = RequestContext(request,{ 'event_list': event_list})
+
+	return HttpResponse(template.render(context))
