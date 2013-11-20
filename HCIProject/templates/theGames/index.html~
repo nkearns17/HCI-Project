@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-	<title> Commonwealth Games Application</title>
-</head>
+{% extends 'theGames/base-bootstrap.html' %}
 
-<body>
+{% block content %}
+
 	<h1> HCI4 Assessed Exercise</h1>
 	Commonwealth Games application <strong>{{ boldmessage }}</strong><br />
 	<img src="/static/cwg.jpg" alt="Picture" /> 
 	
         <a href="/theGames/events/">Events</a><br/>
-</body>
-
+{% endblock %}
 </html>
