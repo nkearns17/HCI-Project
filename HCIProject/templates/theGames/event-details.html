@@ -1,0 +1,33 @@
+<html>
+
+{% extends 'theGames/base-bootstrap.html' %}
+
+{% block content %}
+
+<style type="text/css">
+	.poll{
+		border-style:solid;
+		border-width:2px;
+	}
+</style>
+
+<h2> Event Details </h2><br>
+
+<b> The event is being held at:</b> <i> #VENUE </i><br><br>
+<b> The next event is: #DATE</b><br><br>
+
+<div class="poll" id="poll">
+<u>Who do you think will win?</u>
+<form>
+<input type="radio" name="vote" value="0" onclick="getVote(this.value)">Africa<br>
+<input type="radio" name="vote" value="1" onclick="getVote(this.value)">Americas<br>
+<input type="radio" name="vote" value="1" onclick="getVote(this.value)">Asia<br>
+<input type="radio" name="vote" value="1" onclick="getVote(this.value)">Caribbean<br>
+<input type="radio" name="vote" value="1" onclick="getVote(this.value)">Europe<br>
+<input type="radio" name="vote" value="1" onclick="getVote(this.value)">Oceania<br>
+</form>
+</div>
+
+{% endblock %}
+
+</html>

@@ -1,0 +1,5 @@
+<html>
+
+{% extends 'theGames/base-bootstrap.html' %}
+
+</html>

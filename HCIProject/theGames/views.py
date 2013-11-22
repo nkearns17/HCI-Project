@@ -27,3 +27,23 @@ def events(request):
 	context = RequestContext(request,{ 'event_list': event_list})
 
 	return HttpResponse(template.render(context))
+
+def specific_Event(request, event_name):
+	template = loader.get_template('theGames/specificEvent.html')
+	ev_name = decode_event(event_name);
+	context_dict = {'ev_name': ev_name}
+	event = Event.objects.filter(name=ev_name)
+	if event:
+		spec_events = specificEvent.objects.filter(event = event)
+		context_dict['events_list'] = spec_events
+	context = RequestContext(request, context_dict)
+	return HttpResponse(template.render(context))
+
+def decode_event(event_name):
+	return event_name.replace('_',' ')
+
+def details(request):
+	template = loader.get_template('theGames/event-details.html')
+	context = RequestContext(request)
+	return HttpResponse(template.render(context))
+	
