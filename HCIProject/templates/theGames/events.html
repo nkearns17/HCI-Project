@@ -1,19 +1,25 @@
 <html>
 <body>
 
-{% extends 'base-bootstrap.html' %}
+{% extends 'theGames/base-bootstrap.html' %}
 
 {% block content %}
-	Events List:<br>
+
+	<h2>Events</h2>	
+	<br><br>
+
+	<div class="btn-group ">
 	{% if event_list %}
 		<UL>
 		{% for event in event_list %}
-		        <LI>{{ event.name }}</LI>
+		        <button type="button" class="btn btn-lg">{{ event.name }}</button>
 		{% endfor %}
 		</UL>
 	{% else %}
 		<P>No Events at present.</P>
 	{% endif %}
+	</div> 
+
 {% endblock %}
 
 </body>

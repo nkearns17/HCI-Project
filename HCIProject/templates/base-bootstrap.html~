@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Rango</title>
+    <title>theGames</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -15,6 +15,7 @@
         padding-bottom: 40px;
       }
       .sidebar-nav {
+	width: 100px;
         padding: 9px 0;
       }
          @media (max-width: 980px) {
@@ -40,16 +41,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="/theGames/">TheGames</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-
-                                <li><a href="/theGames/">Home</a></li>
-                                        <li><a href="/theGames/events/">Events</a></li>
-                                        <li><a href="/theGames/updates" >Updates</a></li>
-
-            </ul>
-          </div><!--/.nav-collapse -->
+          <a class="brand" href="/theGames/">theGames</a>
         </div>
       </div>
     </div>
@@ -59,12 +51,29 @@
         <div class="span3">
           <div class="well sidebar-nav">
                  {% block sidebar %}
-                            {% endblock %}
+			<ul class="nav">
+				<li><a href="/theGames/">Home</a></li>
+                                <li><a href="/theGames/events/">Events</a></li>
+                                <li><a href="/theGames/updates" >Updates</a></li>
+			</ul>
+                 {% endblock %}
           </div><!--/.well -->
         </div><!--/span-->
         <div class="span9">
           <div class="hero-unit">
                         {% block content %}
+
+				Events List:<br>
+	{% if event_list %}
+		<UL>
+		{% for event in event_list %}
+		        <LI>{{ event.name }}</LI>
+		{% endfor %}
+		</UL>
+	{% else %}
+		<P>No Events at present.</P>
+	{% endif %}				
+
                             {% endblock %}
           </div>
         </div><!--/span-->
