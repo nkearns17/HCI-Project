@@ -47,3 +47,7 @@ def details(request):
 	context = RequestContext(request)
 	return HttpResponse(template.render(context))
 	
+def results(request):
+	template = loader.get_template('theGames/results.html')
+	context = RequestContext(request)
+	return HttpResponse(template.render(context))

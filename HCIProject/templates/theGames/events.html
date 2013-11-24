@@ -5,14 +5,15 @@
 
 {% block content %}
 
-	<h2>Events</h2>	
+	<center><u><h2>Events</h2></u></center>
 	<br><br>
 
 	<div class="btn-group ">
 	{% if event_list %}
 		<UL>
 		{% for event in event_list %}
-		          <LI><A HREF="/theGames/specificEvent/{{event.name}}">{{event.name}}</A></LI>
+		       <!-- <LI><A HREF="/theGames/specificEvent/{{event.name}}">{{event.name}}</A></LI> -->
+			<a href="/theGames/specificEvent/{{event.name}}" class="btn btn-info btn-large">{{event.name}} </a>
 		{% endfor %}
 		</UL>
 	{% else %}

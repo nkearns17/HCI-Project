@@ -4,9 +4,9 @@
 
 {% block content %}
 
-	<a href="/theGames/events/" class="btn btn-primary btn-large"><i class="icon-white icon-circle-arrow-left"></i> Back to Events</a>
+	<a href="/theGames/events/" class="btn btn-primary btn-large"><i class="icon-white icon-chevron-left"></i> Back to Events</a>
 
-	<h2>{{ev_name}}</h2>
+	<center><h2>{{ev_name}}</h2></center>
 	{% if events_list %}
 		{% for event in events_list %}
 			<div class=event >

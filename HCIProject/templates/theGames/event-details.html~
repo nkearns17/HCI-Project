@@ -5,7 +5,7 @@
 {% block content %}
 
 <style type="text/css">
-	.poll{
+	.details{
 		border-style:solid;
 		border-width:2px;
 	}
@@ -13,19 +13,47 @@
 
 <h2> Event Details </h2><br>
 
-<b> The event is being held at:</b> <i> #VENUE </i><br<br>
-<b> The next event is: #DATE</b><br><br>
+<div class="details">
+<b> The event is being held at:</b> <i> #VENUE </i><br><br>
+<b> The next event is: #DATE</b>
+</div>
+<br><br>
 
-<div class="poll" id="poll">
-<u>Who do you think will win?</u>
-<form>
-<input type="radio" name="vote" value="0" onclick="getVote(this.value)">Africa<br>
-<input type="radio" name="vote" value="1" onclick="getVote(this.value)">Americas<br>
-<input type="radio" name="vote" value="1" onclick="getVote(this.value)">Asia<br>
-<input type="radio" name="vote" value="1" onclick="getVote(this.value)">Caribbean<br>
-<input type="radio" name="vote" value="1" onclick="getVote(this.value)">Europe<br>
-<input type="radio" name="vote" value="1" onclick="getVote(this.value)">Oceania<br>
-</form>
+<div class="span6">
+    <h3><u>Poll: Who do you think will win</u></h3> 
+    <input type="radio" name="country" value="africa"><strong> Africa</strong>
+    <span class="pull-right">30%</span>
+    <div class="progress progress-danger active">
+        <div class="bar" style="width: 30%;"></div>
+    </div> 
+    <input type="radio" name="country" value="americas"><strong> Americas</strong>
+    <span class="pull-right">40%</span>
+    <div class="progress progress-info active">
+        <div class="bar" style="width: 40%;"></div>
+    </div>
+    <input type="radio" name="country" value="asia"><strong> Asia</strong>
+    <span class="pull-right">10%</span>
+    <div class="progress progress-striped active">
+        <div class="bar" style="width: 10%;"></div>
+    </div>
+    <input type="radio" name="country" value="caribbean"><strong> Caribbean</strong>
+    <span class="pull-right">5%</span>
+    <div class="progress progress-success active">
+        <div class="bar" style="width: 5%;"></div>
+    </div>
+    <input type="radio" name="country" value="europe"><strong> Europe</strong>
+    <span class="pull-right">15%</span>
+    <div class="progress progress-warning active">
+        <div class="bar" style="width: 15%;"></div>
+    </div>
+    <input type="radio" name="country" value="oceania"><strong> Oceania</strong>
+    <span class="pull-right">15%</span>
+    <div class="progress progress-warning active">
+        <div class="bar" style="width: 15%;"></div>
+    </div>
+    <p>
+        <a href="#" class="btn btn-large btn-success">Vote</a>
+    </p>
 </div>
 
 {% endblock %}
