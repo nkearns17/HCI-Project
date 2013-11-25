@@ -15,14 +15,14 @@
 
 <h2><center><u>Event Details </u></center> </h2><br>
 
-<div class="details">
+<div class="details"><font size="3">
 <b> The next event is: Sunday 27/07/2014, 14:30 - 18:00</b><br>
-<b> The event is being held at:</b> <i> Hampden Park </i><br><br>
+<b> The event is being held at:</b> <i> Hampden Park </i><br><br></font>
 <div class="maps1"><center><img src="/static/HampdenMap.png" alt="Map" width="700" height="500" /></center></div><br>
-<div class="map2"><center><img src="/static/HciMap1.png" alt="Map" width="700" height="500" /></center></div>
+<div class="map2"><center><img src="/static/HciMap1.png" alt="Map" width="700" height="500" /></center></div><br>
 <div class="button" align="right"><a href="#" class="btn btn-success btn-large" >Get Directions</a></div><br>
-<div class="Showbutton" align="right"><a href="#" class="btn btn-success btn-large" >Hide Directions</a></div><br>
 <div class="directions"><font size="2">
+<h5><u> Directions </u></h5>
 1. Head northwest on University Ave toward Byres Rd/B808 459 ft <br>
 2. Turn left onto Byres Rd/B808 0.3 mi<br>
 3. Turn left onto Dumbarton Rd 0.2 mi<br>
@@ -42,6 +42,7 @@
 17. Turn left onto Prospecthill Dr 0.2 mi<br>
 </font>
 </div>
+<div class="Showbutton" align="right"><a href="#" class="btn btn-success btn-large" >Hide Directions</a></div><br>
 </div>
 
 <script>
@@ -66,43 +67,47 @@ $(".Showbutton").click(function(){
 </script>
 
 <br>
-
-<div class="span6">
-    <h3><u>Poll: Who do you think will win</u></h3> 
-    <input type="radio" name="country" value="africa"><strong> Africa</strong>
-    <span class="pull-right">30%</span>
-    <div class="progress progress-danger active">
-        <div class="bar" style="width: 30%;"></div>
-    </div> 
-    <input type="radio" name="country" value="americas"><strong> Americas</strong>
-    <span class="pull-right">40%</span>
-    <div class="progress progress-info active">
-        <div class="bar" style="width: 40%;"></div>
-    </div>
-    <input type="radio" name="country" value="asia"><strong> Asia</strong>
-    <span class="pull-right">10%</span>
-    <div class="progress progress-striped active">
-        <div class="bar" style="width: 10%;"></div>
-    </div>
-    <input type="radio" name="country" value="caribbean"><strong> Caribbean</strong>
-    <span class="pull-right">5%</span>
-    <div class="progress progress-success active">
-        <div class="bar" style="width: 5%;"></div>
-    </div>
-    <input type="radio" name="country" value="europe"><strong> Europe</strong>
-    <span class="pull-right">15%</span>
-    <div class="progress progress-warning active">
-        <div class="bar" style="width: 15%;"></div>
-    </div>
-    <input type="radio" name="country" value="oceania"><strong> Oceania</strong>
-    <span class="pull-right">15%</span>
-    <div class="progress progress-warning active">
-        <div class="bar" style="width: 15%;"></div>
-    </div>
-    <p>
-        <a href="#" class="btn btn-large btn-success">Vote</a>
-    </p>
+<font size="2">
+<input type="radio" name="country" value="africa"><strong> Africa</strong>
+<div class="progress progress-striped">
+  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+  </div>
 </div>
+<input type="radio" name="country" value="americas"><strong> Americas</strong>
+<div class="progress progress-striped">
+  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%">
+  </div>
+</div>
+<input type="radio" name="country" value="asia"><strong> Asia</strong>
+<div class="progress progress-striped">
+  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%">
+  </div>
+</div>
+<input type="radio" name="country" value="caribbean"><strong> Caribbean</strong>
+<div class="progress progress-striped">
+  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%">
+  </div>
+</div>
+<input type="radio" name="country" value="europe"><strong> Europe</strong>
+<div class="progress progress-striped">
+  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%">
+  </div>
+</div>
+<input type="radio" name="country" value="oceania"><strong> Oceania</strong>
+<div class="progress progress-striped">
+  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+  </div>
+</div>
+<div class="vote"><a href="#" class="btn btn-large btn-success">Vote</a></div>
+</font>
+<script>
+
+$(".vote").click(function(){
+	//$(this).style.width = $(this).style.width+(10+'%');
+	$(this).css("width", '+=' + (0.1 * $('.progress').width()));
+});
+
+</script>
 
 {% endblock %}
 

@@ -6,14 +6,16 @@
 
 	<a href="/theGames/events/" class="btn btn-primary btn-large"><i class="icon-white icon-chevron-left"></i> Back to Events</a>
 
-	<center><h2>{{ev_name}}</h2></center>
+	<center><h2><u>{{ev_name}}</u></h2></center><br>
+	<div class="btn-group ">
 	{% if events_list %}
+		<UL>
 		{% for event in events_list %}
-			<div class=event >
-				<LI>{{event.title}}</LI>
-			</div>
+			<a href="/theGames/details/" class="btn btn-info btn-large">{{event.title}} </a>
 		{% endfor %}
+		</UL>
 	{% endif %}
+	</div>
 
 {% endblock %}
 

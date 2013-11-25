@@ -1,0 +1,11 @@
+<html>
+
+{% extends 'theGames/base-bootstrap.html' %}
+
+{% block content %}
+
+<center><u><h3> Updates </h3></u></center>
+
+{% endblock %}
+
+</html>
