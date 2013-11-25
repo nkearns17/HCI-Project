@@ -1,5 +1,7 @@
 <html>
 
+<script src="http://code.jquery.com/jquery.js"></script>
+
 {% extends 'theGames/base-bootstrap.html' %}
 
 {% block content %}
@@ -11,13 +13,59 @@
 	}
 </style>
 
-<h2> Event Details </h2><br>
+<h2><center><u>Event Details </u></center> </h2><br>
 
 <div class="details">
-<b> The event is being held at:</b> <i> #VENUE </i><br><br>
-<b> The next event is: #DATE</b>
+<b> The next event is: Sunday 27/07/2014, 14:30 - 18:00</b><br>
+<b> The event is being held at:</b> <i> Hampden Park </i><br><br>
+<div class="maps1"><center><img src="/static/HampdenMap.png" alt="Map" width="700" height="500" /></center></div><br>
+<div class="map2"><center><img src="/static/HciMap1.png" alt="Map" width="700" height="500" /></center></div>
+<div class="button" align="right"><a href="#" class="btn btn-success btn-large" >Get Directions</a></div><br>
+<div class="Showbutton" align="right"><a href="#" class="btn btn-success btn-large" >Hide Directions</a></div><br>
+<div class="directions"><font size="2">
+1. Head northwest on University Ave toward Byres Rd/B808 459 ft <br>
+2. Turn left onto Byres Rd/B808 0.3 mi<br>
+3. Turn left onto Dumbarton Rd 0.2 mi<br>
+4. Turn left onto Argyle St 0.8 mi<br>
+5. Continue onto St. Vincent St 0.3 mi<br>
+6. Turn right onto Newton St/A804 469 ft<br>
+7. Merge onto M8 via the ramp on the right to M77/Greenock/Glasgow Airport/Kilmarnock 0.6 mi<br>
+8. At junction 20, exit toward A730/East Kilbride/City Centre (S) 0.3 mi<br>
+9. Merge onto West St 49 ft<br>
+10. Turn left onto Wallace St 0.1 mi<br>
+11. Keep left to continue on Dalintober St 308 ft<br>
+12. Merge onto M74 via the ramp to Carlisle/Cambuslang 	1.3 mi<br>
+13. At junction 1A, take the B763 exit to Polmadie/Rutherglen/A730 0.3 mi<br>
+14. Turn right onto Polmadie Rd/A728. Continue to follow A728 0.7 mi<br>
+15. Turn left toward Prospecthill Rd/B768 423 ft<br>
+16. Turn right onto Prospecthill Rd/B768. Continue to follow Prospecthill Rd 0.1 mi <br>
+17. Turn left onto Prospecthill Dr 0.2 mi<br>
+</font>
 </div>
-<br><br>
+</div>
+
+<script>
+
+$(".map2").hide();
+$(".directions").hide();
+$(".Showbutton").hide();
+
+$(".button").click(function(){
+	$(".maps1").hide();
+	$(".map2").show();
+	$(".directions").show();
+	$(".button").hide();
+	$(".Showbutton").show();
+});
+$(".Showbutton").click(function(){
+	$(".directions").hide();
+	$(".Showbutton").hide();
+	$(".button").show();
+});
+
+</script>
+
+<br>
 
 <div class="span6">
     <h3><u>Poll: Who do you think will win</u></h3> 
