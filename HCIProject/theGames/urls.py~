@@ -10,4 +10,6 @@ urlpatterns = patterns('',
 	url(r'^details', views.details, name='event-details'),
 	url(r'^results', views.results, name='results'),
 	url(r'^updates', views.updates, name='updates'),
+	url(r'^selectCountry', views.selectCountry, name='selectCountry'),
+	url(r'^updatesScot', views.updatesScot, name='updatesScot'),
 )

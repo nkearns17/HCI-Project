@@ -61,3 +61,8 @@ def selectCountry(request):
 	template = loader.get_template('theGames/selectCountry.html')
 	context = RequestContext(request)
 	return HttpResponse(template.render(context))
+
+def updateScot(request):
+	template = loader.get_template('theGames/updateScot.html')
+	context = RequestContext(request)
+	return HttpResponse(template.render(context))

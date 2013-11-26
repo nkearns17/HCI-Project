@@ -17,13 +17,13 @@
 <div class="dropdown">
 <font size="3">
 <select name="country" width="300" style="width: 300px"> 
-  <option value="#">Select Country</option>
-  <option value="#">Africa</option>
-  <option value="#">Americas</option>
-  <option value="#">Asia</option>
-  <option value="#">Caribbean</option>
-  <option value="#">Europe</option>
-  <option value="#">Oceania</option>
+  <option value="updates/">Select Country</option>
+  <option value="updates/">Africa</option>
+  <option value="updates/">Americas</option>
+  <option value="updates/">Asia</option>
+  <option value="updates/">Caribbean</option>
+  <option value="updates/">Europe</option>
+  <option value="updates/">Oceania</option>
 </select>
 </font>
 </div></center>

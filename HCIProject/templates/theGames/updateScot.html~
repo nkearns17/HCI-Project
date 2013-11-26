@@ -8,18 +8,6 @@
 
 {% block content %}
 
-<style type="text/css">
-.dropdown-menu ul {
-    float: left;
-    border-right: 1px solid black;
-    padding-right:20px;
-}
-.header{
-	color:black;
-	font-size:15px;
-}
-</style>
-
 <center><u><h3> Updates </h3></u></center>
 
 <div class="well well-sm">
@@ -79,6 +67,25 @@
 </div>
 </center>
 </div>
+
+<h3>Updates</h5>
+<table class="table table-condensed">
+<tr>
+	<td class="success" height="15%" width="20%"><img src="/static/tick.png" width="10%" height="5%"></td>
+	<td class="success"> Woo Donald McDonald just won a gold medal! </td>
+</tr>
+<tr>
+	<td class="danger"><img src="/static/redCross.png" width="10%" height="5%"></td>
+	<td class="danger"> Bobby just had a false start! </td>
+</tr>
+<tr>
+	<td class="success"><img src="/static/tick.png" width="10%" height="5%"></td>
+	<td class="success"> Senga just completed the triathlon! You go girl </td>
+</tr>
+</table>
+
+</div>
+
 
 <script type="text/javascript">
 $(function(){

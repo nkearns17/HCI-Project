@@ -11,4 +11,5 @@ urlpatterns = patterns('',
 	url(r'^results', views.results, name='results'),
 	url(r'^updates', views.updates, name='updates'),
 	url(r'^selectCountry', views.selectCountry, name='selectCountry'),
+	url(r'^updateScot', views.updateScot, name='updateScot'),
 )

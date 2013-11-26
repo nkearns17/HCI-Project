@@ -1,66 +1,199 @@
 <!DOCTYPE html>
-<html lang="en">
-
-{% extends 'theGames/base-bootstrap.html' %}
-
-{% block content %}
-
-<h2><u><center> The Results </center></u></h2>
-
-The table below shows the current results for each country.<br><br>
-
-<table class="table table-striped table-bordered table-condensed">
-    <tr>
-<td> </td>
-<td><b>Gold</b></td>
-<td><b>Silver</b></td>
-<td><b>Bronze</b></td>
-<td><b>Total</b></td>
-</tr>
-<tr>
-<td><b>Africa</b></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><b>Americas</b></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><b>Asia</b></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><b>Caribbean</b></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><b>Europe</b></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><b>Oceania</b></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</table>
-
-{% endblock %}
-
-</html>
+	<html lang="en">
+	
+	{% extends 'theGames/base-bootstrap.html' %}
+	
+	{% block content %}
+	
+	<h2><u><center> The Results </center></u></h2>
+	
+	The table below shows the current results for each country.<br><br>
+	
+	<table class="table table-bordered table-condensed">
+	<tr>
+	<td> </td>
+	<td ><b>Gold</b></td>
+	<td ><b>Silver</b></td>
+	<td ><b>Bronze</b></td>
+	<td ><b>Total</b></td>
+	</tr>
+	<tr>
+	<td><b>Aden</b></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td>DNC</td>
+	</tr>
+	<tr>
+	<td class="success"><b>Bangladesh</b></td>
+	<td class="success">-</td>
+	<td class="success">-</td>
+	<td class="success">1</td>
+	<td class="success">1</td>
+	</tr>
+	<tr>
+	<td><b>Belize</b></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td>DNC</td>
+	</tr>
+	<tr>
+	<td><b>Bermuda</b></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td>DNC</td>
+	</tr>
+	<tr>
+	<td class="success"><b>Botswana</b></td>
+	<td class="success">1</td>
+	<td class="success">-</td>
+	<td class="success">3</td>
+	<td class="success">4</td>
+	</tr>
+	<tr>
+	<td><b>Brunei Darassalam</b></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td>DNC</td>
+	</tr>
+	<tr>
+	<td class="success"><b>Cameroon</b></td>
+	<td class="success">-</td>
+	<td class="success">2</td>
+	<td class="success">4</td>
+	<td class="success">6</td>
+	</tr>
+	<tr>
+	<td class="success"><b>Canada</b></td>
+	<td class="success">26</td>
+	<td class="success">17</td>
+	<td class="success">33</td>
+	<td class="success">76</td>
+	</tr>
+	<tr>
+	<td class="success"><b>Cayman Islands</b></td>
+	<td class="success">1</td>
+	<td class="success"></td>
+	<td class="success"></td>
+	<td class="success">1</td>
+	</tr>
+	<tr>
+	<td><b>Dominica</b></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td>DNC</td>
+	</tr>
+	<tr>
+	<td><b>Falkland Islands</b></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td>DNC</td>
+	</tr>
+	<tr>
+	<td class="success"><b>Ghana</b></td>
+	<td class="success">-</td>
+	<td class="success">1</td>
+	<td class="success">-</td>
+	<td class="success">1</td>
+	</tr>
+	<tr>
+	<td><b>Grenada</b></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td>DNC</td>
+	</tr>
+	<tr>
+	<td class="success"><b>Guyana</b></td>
+	<td class="success">-</td>
+	<td class="success">1</td>
+	<td class="success">-</td>
+	<td class="success">1</td>
+	</tr>
+	<tr>
+	<td><b>Hong Kong</b></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td>DNC</td>
+	</tr>
+	<tr>
+	<td class="success"><b>India</b></td>
+	<td class="success">38</td>
+	<td class="success">27</td>
+	<td class="success">36</td>
+	<td class="success">101</td>
+	</tr>
+	<tr>
+	<td class="success"><b>Jamaica</b></td>
+	<td class="success">2</td>
+	<td class="success">4</td>
+	<td class="success">1</td>
+	<td class="success">7</td>
+	</tr>
+	<tr>
+	<td><b>Jersey</b></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td>DNC</td>
+	</tr>
+	<tr>
+	<td class="success"><b>Kenya</b></td>
+	<td class="success">12</td>
+	<td class="success">11</td>
+	<td class="success">9</td>
+	<td class="success">32</td>
+	</tr>
+	<tr>
+	<td><b>Losotho</b></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td>DNC</td>
+	</tr>
+	<tr>
+	<td><b>Malta</b></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td>DNC</td>
+	</tr>
+	<tr>
+	<td><b>Montserrat</b></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td>DNC</td>
+	</tr>
+	<tr>
+	<td class="success"><b>Northern Ireland</b></td>
+	<td class="success">3</td>
+	<td class="success">3</td>
+	<td class="success">4</td>
+	<td class="success">10</td>
+	</tr>
+	<tr>
+	<td class="success"><b>Scotland</b></td>
+	<td class="success">9</td>
+	<td class="success">10</td>
+	<td class="success">7</td>
+	<td class="success">26</td>
+	</tr>
+	<tr>
+	<td class="success"><b>Wales</b></td>
+	<td class="success">2</td>
+	<td class="success">7</td>
+	<td class="success">10</td>
+	<td class="success">19</td>
+	</tr>
+	</table>
+	
+	{% endblock %}
+	
+	</html>

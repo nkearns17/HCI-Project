@@ -4,70 +4,97 @@
 {% extends 'theGames/base-bootstrap.html' %}
 
 <head>
-<link href="{{STATIC_URL}}bootstrap/js/bootstrap.js" rel="stylesheet"></head>
+<link href="{{STATIC_URL}}bootstrap/js/bootstrap.min.js"></head>
 
 {% block content %}
+
+<style type="text/css">
+.dropdown-menu ul {
+    float: left;
+    border-right: 1px solid black;
+    padding-right:20px;
+}
+.header{
+	color:black;
+	font-size:15px;
+}
+</style>
 
 <center><u><h3> Updates </h3></u></center>
 
 <div class="well well-sm">
-<center><u><h3> Select Your Country </h3></u></center>
+
+<font size="3">Please click the button below to select the nation you wish to follow:</font><br>
 
 <center>
 <div class="dropdown">
-<font size="3">
-<select name="country" id="country" width="300" style="width: 300px"> 
-  <option class="option" value="0">Select Country</option>
-  <option class="option" value="1">Africa</option>
-  <option class="option" value="2">Americas</option>
-  <option class="option" value="3">Asia</option>
-  <option class="option" value="4">Caribbean</option>
-  <option class="option" value="5">Europe</option>
-  <option class="option" value="6">Oceania</option>
-</select>
-</font>
-</div></center>
+  <button class="dropdown-toggle" data-toggle="dropdown" href="#"><font size="3">Select Your Nation</font></button>
+  <div class="dropdown-menu" role="menu">
+      <ul>
+          
+        <li><a class="header" href="#"><i><u>Africa</u></i></a></li>
+  <li><a href="#"> Botswana </a></li>
+  <li><a href="#"> Cameroon </a></li>
+  <li><a href="#"> Ghana </a></li>
+  <li><a href="#"> Kenya </a></li>
+  <li><a href="#"> Lesotho </a></li>
+  </ul><ul>
+  <li><a class="header" href="#"><i><u>Americas</u></i></a></li>
+  <li><a href="#"> Belize </a></li>
+  <li><a href="#"> Bermuda </a></li>
+  <li><a href="#"> Canada </a></li>
+  <li><a href="#"> Falkland Islands </a></li>
+  <li><a href="#"> Guyana </a></li>
+  </ul><ul>
+  <li><a class="header" href="#"><i><u>Asia</u></i></a></li>
+  <li><a href="#"> Aden </a></li>
+  <li><a href="#"> Bangladesh </a></li>
+  <li><a href="#"> Brunei Darussalam </a></li>
+  <li><a href="#"> Hong Kong </a></li>
+  <li><a href="#"> India </a></li>
+  </ul><ul>
+  <li><a class="header" href="#"><i><u>Caribbean</u></i></a></li>
+  <li><a href="#"> Cayman Islands </a></li>
+  <li><a href="#"> Dominica </a></li>
+  <li><a href="#"> Grenada </a></li>
+  <li><a href="#"> Jamaica </a></li>
+  <li><a href="#"> Montserrat </a></li>
+  </ul><ul>
+  <li><a class="header" href="#"><i><u>Europe</u></i></a></li>
+  <li><a href="#"> Jersey </a></li>
+  <li><a href="#"> Malta </a></li>
+  <li><a href="#"> Northern Ireland </a></li>
+  <li><a href="updateScot/"> Scotland </a></li>
+  <li><a href="#"> Wales </a></li>
+  </ul><ul>
+  <li><a class="header" href="#"><i><u>Oceania</u></i></a></li>
+  <li><a href="#"> New Zealand </a></li>
+  <li><a href="#"> Niue </a></li>
+  <li><a href="#"> Norfolk Island </a></li>
+  <li><a href="#"> Papua New Guinea </a></li>
+  <li><a href="#"> Samoa </a></li>
+  </ul><ul>
+      </ul>
+  </div>
+</div>
+</center>
 </div>
 
-<script>
-
-var e = document.getElementById("country");
-var strUser = e.options[e.selectedIndex].text;
-
-document.write(strUser);
-
-document.write($("#country :selected").text());
-document.write($("#country").val());
-
-$('#country').change(function() {
-  alert(($(this).find(":selected").text());
+<script type="text/javascript">
+$(function(){
+    $(".dropdown-toggle").dropdown('toggle');
 });
 
-
+$('.dropdown-menu li a').click(function() {
+    alert($(this).text());
+});
 </script>
 
-<!--
-<script>
-$(document).ready(function() {
-	   $('#Popup').click(function() {
-	     var NWin = window.open($(this).prop('href'), '', 'height=800,width=800');
-	     if (window.focus)
-	     {
-	       NWin.focus();
-	     }
-	     return false;
-	    });
-	});​
-</script>
 
-<body onload="openWin()">
-
-<script>
-function openWin()
-{
-window.open("selectCountry","_blank","toolbar=yes, scrollbars=yes, resizable=yes, top=500, left=500, width=800, height=400");
-}
-</script> -->
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}bootstrap/css/bootstrap.min.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script type="text/javascript" src="{{STATIC_URL}}bootstrap/js/bootstrap.min.js"></script>
 
 {% endblock %}
 
