@@ -1,0 +1,33 @@
+<!DOCTYPE html>  
+<html>
+
+{% extends 'theGames/base-bootstrap.html' %}
+
+<head>
+<link href="{{STATIC_URL}}bootstrap/js/bootstrap.js" rel="stylesheet"></head>
+
+{% block sidebar %}
+{% endblock %}
+
+{% block content %}
+
+<center><u><h3> Select Your Country </h3></u></center>
+
+<center>
+<div class="dropdown">
+<font size="3">
+<select name="country" width="300" style="width: 300px"> 
+  <option value="#">Select Country</option>
+  <option value="#">Africa</option>
+  <option value="#">Americas</option>
+  <option value="#">Asia</option>
+  <option value="#">Caribbean</option>
+  <option value="#">Europe</option>
+  <option value="#">Oceania</option>
+</select>
+</font>
+</div></center>
+
+{% endblock %}
+
+</html>

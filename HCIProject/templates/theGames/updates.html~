@@ -1,10 +1,73 @@
+<!DOCTYPE html>  
 <html>
 
 {% extends 'theGames/base-bootstrap.html' %}
 
+<head>
+<link href="{{STATIC_URL}}bootstrap/js/bootstrap.js" rel="stylesheet"></head>
+
 {% block content %}
 
 <center><u><h3> Updates </h3></u></center>
+
+<div class="well well-sm">
+<center><u><h3> Select Your Country </h3></u></center>
+
+<center>
+<div class="dropdown">
+<font size="3">
+<select name="country" id="country" width="300" style="width: 300px"> 
+  <option class="option" value="0">Select Country</option>
+  <option class="option" value="1">Africa</option>
+  <option class="option" value="2">Americas</option>
+  <option class="option" value="3">Asia</option>
+  <option class="option" value="4">Caribbean</option>
+  <option class="option" value="5">Europe</option>
+  <option class="option" value="6">Oceania</option>
+</select>
+</font>
+</div></center>
+</div>
+
+<script>
+
+var e = document.getElementById("country");
+var strUser = e.options[e.selectedIndex].text;
+
+document.write(strUser);
+
+document.write($("#country :selected").text());
+document.write($("#country").val());
+
+$('#country').change(function() {
+  alert(($(this).find(":selected").text());
+});
+
+
+</script>
+
+<!--
+<script>
+$(document).ready(function() {
+	   $('#Popup').click(function() {
+	     var NWin = window.open($(this).prop('href'), '', 'height=800,width=800');
+	     if (window.focus)
+	     {
+	       NWin.focus();
+	     }
+	     return false;
+	    });
+	});​
+</script>
+
+<body onload="openWin()">
+
+<script>
+function openWin()
+{
+window.open("selectCountry","_blank","toolbar=yes, scrollbars=yes, resizable=yes, top=500, left=500, width=800, height=400");
+}
+</script> -->
 
 {% endblock %}
 

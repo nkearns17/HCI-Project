@@ -9,4 +9,5 @@ urlpatterns = patterns('',
 	url(r'^specificEvent/(?P<event_name>\w+)', views.specific_Event, name='specificEvent'),
 	url(r'^details', views.details, name='event-details'),
 	url(r'^results', views.results, name='results'),
+	url(r'^updates', views.updates, name='updates'),
 )

@@ -11,7 +11,7 @@
 	{% if events_list %}
 		<UL>
 		{% for event in events_list %}
-			<a href="#" class="btn btn-info btn-large">{{event.title}} </a>
+			<a href="/theGames/details/" class="btn btn-info btn-large">{{event.title}} </a>
 		{% endfor %}
 		</UL>
 	{% endif %}
