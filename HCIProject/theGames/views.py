@@ -76,3 +76,8 @@ def scotResults(request):
 	template = loader.get_template('theGames/scotResults.html')
 	context = RequestContext(request)
 	return HttpResponse(template.render(context))
+
+def test(request):
+	template = loader.get_template('theGames/test.html')
+	context = RequestContext(request)
+	return HttpResponse(template.render(context))

@@ -8,46 +8,76 @@
 	<center><u><h2>Events</h2></u></center>
 	<br><br>
 
-	<div class="btn-group ">
-	{% if event_list %}
-		<UL>
-		{% for event in event_list %}
-		       <!-- <LI><A HREF="/theGames/specificEvent/{{event.name}}">{{event.name}}</A></LI> -->
-			<a href="/theGames/specificEvent/{{event.name}}" class="btn btn-info btn-large">{{event.name}} </a>
-		{% endfor %}
-		</UL>
-	{% else %}
-		<P>No Events at present.</P>
-	{% endif %}
-	</div> 
+	
+<style type="text/css">
+.divider{
+    width:20px;
+    height:auto;
+    display:inline-block;
+}
+button{
+	width:150px;
+}
+</style>
+
+<div class="btn-group">
+<audio id="athletics" src="/static/courseWorkRecordings/Athletics.MP3"></audio>
+<button onclick="location.href='/theGames/specificEvent/Athletics';" onmouseover="document.getElementById('athletics').play()" onmouseout="document.getElementById('athletics').pause()">Athletics</button> <div class="divider"></div>
+
+<audio id="aquatics" src="/static/courseWorkRecordings/Aquatics.MP3"></audio>
+<button onclick="location.href='/theGames/specificEvent/Aquatics';" onmouseover="document.getElementById('aquatics').play()" onmouseout="document.getElementById('aquatics').pause()">Aquatics</button> <div class="divider"></div>
+
+<audio id="badminton" src="/static/courseWorkRecordings/Badminton.MP3"></audio>
+<button onclick="location.href='/theGames/specificEvent/Badminton';" onmouseover="document.getElementById('badminton').play()" onmouseout="document.getElementById('badminton').pause()">Badminton</button> <div class="divider"></div>
+
+<audio id="Boxing" src="/static/courseWorkRecordings/Boxing.MP3"></audio>
+<button onclick="location.href='/theGames/specificEvent/Boxing';" onmouseover="document.getElementById('Boxing').play()" onmouseout="document.getElementById('Boxing').pause()">Boxing</button> <div class="divider"></div>
+<br><br>
+<audio id="Cycling" src="/static/courseWorkRecordings/Cycling.MP3"></audio>
+<button onclick="location.href='/theGames/specificEvent/Cycling';" onmouseover="document.getElementById('Cycling').play()" onmouseout="document.getElementById('Cycling').pause()">Cycling</button> <div class="divider"></div>
+
+<audio id="Gymnastics" src="/static/courseWorkRecordings/Gymnastics.MP3"></audio>
+<button onclick="location.href='/theGames/specificEvent/Gymnastics';" onmouseover="document.getElementById('Gymnastics').play()" onmouseout="document.getElementById('Gymnastics').pause()">Gymnastics</button> <div class="divider"></div>
+
+<audio id="Hockey" src="/static/courseWorkRecordings/Hockey.MP3"></audio>
+<button onclick="location.href='/theGames/specificEvent/Hockey';" onmouseover="document.getElementById('Hockey').play()" onmouseout="document.getElementById('Hockey').pause()">Hockey</button> <div class="divider"></div>
+
+<audio id="Judo" src="/static/courseWorkRecordings/Judo.MP3"></audio>
+<button onclick="location.href='/theGames/specificEvent/Judo';" onmouseover="document.getElementById('Judo').play()" onmouseout="document.getElementById('Judo').pause()">Judo</button> <div class="divider"></div>
+<br><br>
+<audio id="LawnBowls" src="/static/courseWorkRecordings/LawnBowls.MP3"></audio>
+<button onclick="location.href='/theGames/';" onmouseover="document.getElementById('LawnBowls').play()" onmouseout="document.getElementById('LawnBowls').pause()">LawnBowls</button> <div class="divider"></div>
+
+<audio id="Netball" src="/static/courseWorkRecordings/Netball.MP3"></audio>
+<button onclick="location.href='/theGames/specificEvent/Netball';" onmouseover="document.getElementById('Netball').play()" onmouseout="document.getElementById('Netball').pause()">Netball</button> <div class="divider"></div>
+
+<audio id="rugbySevens" src="/static/courseWorkRecordings/rugbySevens.MP3"></audio>
+<button onclick="location.href='/theGames/specificEvent/Rugby%20Sevens';" onmouseover="document.getElementById('rugbySevens').play()" onmouseout="document.getElementById('rugbySevens').pause()">rugbySevens</button> <div class="divider"></div>
+
+<audio id="Shooting" src="/static/courseWorkRecordings/Shooting.MP3"></audio>
+<button onclick="location.href='/theGames/specificEvent/Shooting';" onmouseover="document.getElementById('Shooting').play()" onmouseout="document.getElementById('Shooting').pause()">Shooting</button> <div class="divider"></div>
+<br><br>
+<audio id="Squash" src="/static/courseWorkRecordings/Squash.MP3"></audio>
+<button onclick="location.href='/theGames/specificEvent/Squash';" onmouseover="document.getElementById('Squash').play()" onmouseout="document.getElementById('Squash').pause()">Squash</button> <div class="divider"></div>
+
+<audio id="TableTennis" src="/static/courseWorkRecordings/TableTennis.MP3"></audio>
+<button onclick="location.href='/theGames/specificEvent/Table%20Tennis';" onmouseover="document.getElementById('TableTennis').play()" onmouseout="document.getElementById('TableTennis').pause()">TableTennis</button> <div class="divider"></div>
+
+<audio id="Triathlon" src="/static/courseWorkRecordings/Triathlon.MP3"></audio>
+<button onclick="location.href='/theGames/specificEvent/Triathlon';" onmouseover="document.getElementById('Triathlon').play()" onmouseout="document.getElementById('Triathlon').pause()">Triathlon</button> <div class="divider"></div>
+
+<audio id="Weightlifting" src="/static/courseWorkRecordings/Weightlifting.MP3"></audio>
+<button onclick="location.href='/theGames/specificEvent/Weightlifting';" onmouseover="document.getElementById('Weightlifting').play()" onmouseout="document.getElementById('Weightlifting').pause()">Weightlifting</button> <div class="divider"></div>
+<br><br>
+<audio id="Wrestling" src="/static/courseWorkRecordings/Wrestling.MP3"></audio>
+<button onclick="location.href='/theGames/specificEvent/Wrestling';" onmouseover="document.getElementById('Wrestling').play()" onmouseout="document.getElementById('Wrestling').pause()">Wrestling</button> <div class="divider"></div>
+</div>
+
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}bootstrap/css/bootstrap.min.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script type="text/javascript" src="{{STATIC_URL}}bootstrap/js/bootstrap.min.js"></script>
 
 {% endblock %}
-
-<!--       $(document).ready(function() {
-        var audioElement = document.createElement('audio');
-        audioElement.setAttribute('src', 'http://www.uscis.gov/files/nativedocuments/Track%2093.mp3');
-        audioElement.setAttribute('autoplay', 'autoplay');
-        //audioElement.load()
-        $.get();
-        audioElement.addEventListener("load", function() {
-        audioElement.play();
-        }, true);
-
-
-
-
-        $('.play').click(function() {
-        audioElement.play();
-        });
-
-
-        $('.pause').click(function() {
-        audioElement.pause();
-        });
-
-
-
-}); -->
-
 </body>
 </html>
