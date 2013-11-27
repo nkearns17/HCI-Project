@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+	<html lang="en">
+	
+	{% extends 'theGames/base-bootstrap.html' %}
+	
+	{% block content %}
+
+<style type="text/css">
+.dropdown-menu ul {
+    float: left;
+    border-right: 1px solid black;
+    padding-right:20px;
+}
+.header{
+	color:black;
+	font-size:15px;
+}
+.table {
+font-size: 15px 
+}
+.success{
+font-size:20px;
+}
+</style>
+
+<a href="/theGames/results/" class="btn btn-primary btn-large"><i class="icon-white icon-chevron-left"></i> Back to All Results</a>
+
+<h2><u><center> The Results </center></u></h2>
+	
+<font size="3">The table below shows the current results for all countries. If you would like to view results for a certain nation, please select using the button below:</font>
+
+<div class="well well-sm">
+<center>
+<div class="dropdown">
+  <button class="dropdown-toggle" data-toggle="dropdown" href="#"><font size="3">Select Your Nation</font></button>
+  <div class="dropdown-menu" role="menu">
+      <ul>
+          
+        <li><a class="header" href="#"><i><u>Africa</u></i></a></li>
+  <li><a href="#"> Botswana </a></li>
+  <li><a href="#"> Cameroon </a></li>
+  <li><a href="#"> Ghana </a></li>
+  <li><a href="#"> Kenya </a></li>
+  <li><a href="#"> Lesotho </a></li>
+  </ul><ul>
+  <li><a class="header" href="#"><i><u>Americas</u></i></a></li>
+  <li><a href="#"> Belize </a></li>
+  <li><a href="#"> Bermuda </a></li>
+  <li><a href="updateCanada/"> Canada </a></li>
+  <li><a href="#"> Falkland Islands </a></li>
+  <li><a href="#"> Guyana </a></li>
+  </ul><ul>
+  <li><a class="header" href="#"><i><u>Asia</u></i></a></li>
+  <li><a href="#"> Aden </a></li>
+  <li><a href="#"> Bangladesh </a></li>
+  <li><a href="#"> Brunei Darussalam </a></li>
+  <li><a href="#"> Hong Kong </a></li>
+  <li><a href="#"> India </a></li>
+  </ul><ul>
+  <li><a class="header" href="#"><i><u>Caribbean</u></i></a></li>
+  <li><a href="#"> Cayman Islands </a></li>
+  <li><a href="#"> Dominica </a></li>
+  <li><a href="#"> Grenada </a></li>
+  <li><a href="#"> Jamaica </a></li>
+  <li><a href="#"> Montserrat </a></li>
+  </ul><ul>
+  <li><a class="header" href="#"><i><u>Europe</u></i></a></li>
+  <li><a href="#"> Jersey </a></li>
+  <li><a href="#"> Malta </a></li>
+  <li><a href="#"> Northern Ireland </a></li>
+  <li><a href="scotResults/"> Scotland </a></li>
+  <li><a href="#"> Wales </a></li>
+  </ul><ul>
+  <li><a class="header" href="#"><i><u>Oceania</u></i></a></li>
+  <li><a href="#"> New Zealand </a></li>
+  <li><a href="#"> Niue </a></li>
+  <li><a href="#"> Norfolk Island </a></li>
+  <li><a href="#"> Papua New Guinea </a></li>
+  <li><a href="#"> Samoa </a></li>
+  </ul><ul>
+      </ul>
+  </div>
+</div>
+</center>
+</div><br>
+
+	
+	<table class="table table-bordered table-condensed">
+	<tr>
+	<td class="success"><b>Scotland</b></td>
+	<td class="success"><b>9<b></td>
+	<td class="success"><b>10<b></td>
+	<td class="success"><b>7<b></td>
+	<td class="success"><b>26<b></td>
+	</tr><font size="2">
+	<tr>
+	<td class="active">1500m - Women  </td>
+	<td class="active"> - </td>
+	<td class="active"> - </td>
+	<td class="active"> 1 </td>
+	<td class="active"> 1 </td>
+	</tr>
+	<tr>
+	<td class="active">400m Hurdles - Women</td>
+	<td class="active"> - </td>
+	<td class="active"> 1 </td>
+	<td class="active"> - </td>
+	<td class="active"> 1 </td>
+	</tr>
+	<tr>
+	<td class="active">Boxing 60kg - Men </td>
+	<td class="active"> - </td>
+	<td class="active"> 1 </td>
+	<td class="active"> - </td>
+	<td class="active"> 1 </td>
+	</tr>
+	<tr>
+	<td class="active">Boxing 81kg - Men</td>
+	<td class="active"> 1 </td>
+	<td class="active"> - </td>
+	<td class="active"> - </td>
+	<td class="active"> 1 </td>
+	</tr>
+	<tr>
+	<td class="active">Boxing 91kg - Men</td>
+	<td class="active"> - </td>
+	<td class="active"> - </td>
+	<td class="active"> 1 </td>
+	<td class="active"> 1 </td>
+	</tr>
+	<tr>
+	<td class="active">Cycling Track: Team Sprint - Women</td>
+	<td class="active"> - </td>
+	<td class="active"> 1 </td>
+	<td class="active"> - </td>
+	<td class="active"> 1 </td>
+	</tr>
+	<tr>
+	<td class="active">50m Rifle 3 Position - Men</td>
+	<td class="active"> - </td>
+	<td class="active"> 1 </td>
+	<td class="active"> - </td>
+	<td class="active"> 1 </td>
+	</tr>
+<tr>
+	<td class="active">50m Rifle 3 Position (Pair) - Men</td>
+	<td class="active"> - </td>
+	<td class="active"> - </td>
+	<td class="active"> 1 </td>
+	<td class="active"> 1 </td>
+	</tr>
+<tr>
+	<td class="active">50m Rifle 3 Position (Pair) - Women</td>
+	<td class="active"> - </td>
+	<td class="active"> 1 </td>
+	<td class="active"> - </td>
+	<td class="active"> 1 </td>
+	</tr>
+<tr>
+	<td class="active">50m Rifle Prone - Women</td>
+	<td class="active"> 1 </td>
+	<td class="active"> - </td>
+	<td class="active"> - </td>
+	<td class="active"> 1 </td>
+	</tr>
+<tr>
+	<td class="active">50m Rifle Prone - Men</td>
+	<td class="active"> 1 </td>
+	<td class="active"> - </td>
+	<td class="active"> - </td>
+	<td class="active"> 1 </td>
+	</tr>
+<tr>
+	<td class="active">50m Rifle Prone (Pair) - Men</td>
+	<td class="active"> 1 </td>
+	<td class="active"> - </td>
+	<td class="active"> - </td>
+	<td class="active"> 1 </td>
+	</tr>
+<tr>
+	<td class="active">50m Rifle Prone (Pair) - Women</td>
+	<td class="active"> 1 </td>
+	<td class="active"> - </td>
+	<td class="active"> - </td>
+	<td class="active"> 1 </td>
+	</tr>
+<tr>
+	<td class="active">Fullbore Rifle Queens Prize (Pair) - Open</td>
+	<td class="active"> - </td>
+	<td class="active"> 1 </td>
+	<td class="active"> - </td>
+	<td class="active"> 1 </td>
+	</tr>
+<tr>
+	<td class="active">Trap - Women</td>
+	<td class="active"> - </td>
+	<td class="active"> 1 </td>
+	<td class="active"> - </td>
+	<td class="active"> 1 </td>
+	</tr>
+<tr>
+	<td class="active">100m Freestyle Para Sport S8 - Men</td>
+	<td class="active"> - </td>
+	<td class="active"> 1 </td>
+	<td class="active"> - </td>
+	<td class="active"> 1 </td>
+	</tr>
+<tr>
+	<td class="active">200m Breaststroke - Men</td>
+	<td class="active"> - </td>
+	<td class="active"> 1 </td>
+	<td class="active"> - </td>
+	<td class="active"> 1 </td>
+	</tr>
+<tr>
+	<td class="active">200m Freestyle - Men</td>
+	<td class="active"> 1 </td>
+	<td class="active"> - </td>
+	<td class="active"> - </td>
+	<td class="active"> 1 </td>
+	</tr>
+<tr>
+	<td class="active">4 x 200m Freestyle Relay - Men</td>
+	<td class="active"> - </td>
+	<td class="active"> 1 </td>
+	<td class="active"> - </td>
+	<td class="active"> 1 </td>
+	</tr>
+<tr>
+	<td class="active">400m Freestyle - Men</td>
+	<td class="active"> - </td>
+	<td class="active"> 1 </td>
+	<td class="active"> - </td>
+	<td class="active"> 1 </td>
+	</tr>
+<tr>
+	<td class="active">200m Breaststroke - Men</td>
+	<td class="active"> - </td>
+	<td class="active"> 1 </td>
+	<td class="active"> - </td>
+	<td class="active"> 1 </td>
+	</tr>
+<tr>
+	<td class="active">200m Breaststroke - Men</td>
+	<td class="active"> - </td>
+	<td class="active"> 1 </td>
+	<td class="active"> - </td>
+	<td class="active"> 1 </td>
+	</tr>
+<tr>
+	<td class="active">200m Breaststroke - Men</td>
+	<td class="active"> - </td>
+	<td class="active"> - </td>
+	<td class="active"> 1 </td>
+	<td class="active"> 1 </td>
+	</tr>
+<tr>
+	<td class="active">400m Individual Medley - Women</td>
+	<td class="active"> 1 </td>
+	<td class="active"> - </td>
+	<td class="active"> - </td>
+	<td class="active"> 1 </td>
+	</tr>
+<tr>
+	<td class="active">Synchronized swimming: Solo - Women</td>
+	<td class="active"> - </td>
+	<td class="active"> - </td>
+	<td class="active"> 1 </td>
+	<td class="active"> 1 </td>
+	</tr>
+<tr>
+	<td class="active">Tennis: Doubles - Mixed</td>
+	<td class="active"> 1 </td>
+	<td class="active"> - </td>
+	<td class="active"> - </td>
+	<td class="active"> 1 </td>
+	</tr>
+<tr>
+	<td class="active">Weightlifting: - 94kg - Men</td>
+	<td class="active"> - </td>
+	<td class="active"> 1 </td>
+	<td class="active"> - </td>
+	<td class="active"> 1 </td>
+	</tr></font>
+	</table>
+
+
+<script type="text/javascript">
+$(function(){
+    $(".dropdown-toggle").dropdown('toggle');
+});
+
+$('.dropdown-menu li a').click(function() {
+    alert($(this).text());
+});
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}bootstrap/css/bootstrap.min.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script type="text/javascript" src="{{STATIC_URL}}bootstrap/js/bootstrap.min.js"></script>
+
+	
+	{% endblock %}
+	
+	</html>

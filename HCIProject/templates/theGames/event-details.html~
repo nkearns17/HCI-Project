@@ -7,11 +7,13 @@
 {% block content %}
 
 <style type="text/css">
-	option.details{
+	.details{
 		border-style:solid;
 		border-width:2px;
 	}
 </style>
+
+<a href="/theGames/specificEvent/Athletics" class="btn btn-primary btn-large"><i class="icon-white icon-chevron-left"></i> Back to Events</a>
 
 <h2><center><u>Event Details </u></center> </h2><br>
 

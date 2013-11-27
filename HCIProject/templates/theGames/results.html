@@ -4,10 +4,81 @@
 	{% extends 'theGames/base-bootstrap.html' %}
 	
 	{% block content %}
+
+<style type="text/css">
+.dropdown-menu ul {
+    float: left;
+    border-right: 1px solid black;
+    padding-right:20px;
+}
+.header{
+	color:black;
+	font-size:15px;
+}
+.table {
+font-size: 15px 
+}
+</style>
 	
-	<h2><u><center> The Results </center></u></h2>
+<h2><u><center> The Results </center></u></h2>
 	
-	The table below shows the current results for each country.<br><br>
+<font size="3">The table below shows the current results for all countries. If you would like to view results for a certain nation, please select using the button below:</font>
+
+<div class="well well-sm">
+<center>
+<div class="dropdown">
+  <button class="dropdown-toggle" data-toggle="dropdown" href="#"><font size="3">Select Your Nation</font></button>
+  <div class="dropdown-menu" role="menu">
+      <ul>
+          
+        <li><a class="header" href="#"><i><u>Africa</u></i></a></li>
+  <li><a href="#"> Botswana </a></li>
+  <li><a href="#"> Cameroon </a></li>
+  <li><a href="#"> Ghana </a></li>
+  <li><a href="#"> Kenya </a></li>
+  <li><a href="#"> Lesotho </a></li>
+  </ul><ul>
+  <li><a class="header" href="#"><i><u>Americas</u></i></a></li>
+  <li><a href="#"> Belize </a></li>
+  <li><a href="#"> Bermuda </a></li>
+  <li><a href="#"> Canada </a></li>
+  <li><a href="#"> Falkland Islands </a></li>
+  <li><a href="#"> Guyana </a></li>
+  </ul><ul>
+  <li><a class="header" href="#"><i><u>Asia</u></i></a></li>
+  <li><a href="#"> Aden </a></li>
+  <li><a href="#"> Bangladesh </a></li>
+  <li><a href="#"> Brunei Darussalam </a></li>
+  <li><a href="#"> Hong Kong </a></li>
+  <li><a href="#"> India </a></li>
+  </ul><ul>
+  <li><a class="header" href="#"><i><u>Caribbean</u></i></a></li>
+  <li><a href="#"> Cayman Islands </a></li>
+  <li><a href="#"> Dominica </a></li>
+  <li><a href="#"> Grenada </a></li>
+  <li><a href="#"> Jamaica </a></li>
+  <li><a href="#"> Montserrat </a></li>
+  </ul><ul>
+  <li><a class="header" href="#"><i><u>Europe</u></i></a></li>
+  <li><a href="#"> Jersey </a></li>
+  <li><a href="#"> Malta </a></li>
+  <li><a href="#"> Northern Ireland </a></li>
+  <li><a href="scotResults/"> Scotland </a></li>
+  <li><a href="#"> Wales </a></li>
+  </ul><ul>
+  <li><a class="header" href="#"><i><u>Oceania</u></i></a></li>
+  <li><a href="#"> New Zealand </a></li>
+  <li><a href="#"> Niue </a></li>
+  <li><a href="#"> Norfolk Island </a></li>
+  <li><a href="#"> Papua New Guinea </a></li>
+  <li><a href="#"> Samoa </a></li>
+  </ul><ul>
+      </ul>
+  </div>
+</div>
+</center>
+</div><br>
+
 	
 	<table class="table table-bordered table-condensed">
 	<tr>
@@ -18,181 +89,199 @@
 	<td ><b>Total</b></td>
 	</tr>
 	<tr>
-	<td><b>Aden</b></td>
+	<td>Aden</td>
 	<td></td>
 	<td></td>
 	<td></td>
 	<td>DNC</td>
 	</tr>
 	<tr>
-	<td class="success"><b>Bangladesh</b></td>
-	<td class="warning">-</td>
-	<td class="active">-</td>
+	<td class="success">Bangladesh</td>
+	<td class="success">-</td>
+	<td class="success">-</td>
 	<td class="success">1</td>
-	<td class="warning">1</td>
+	<td class="success">1</td>
 	</tr>
 	<tr>
-	<td><b>Belize</b></td>
+	<td>Belize</td>
 	<td></td>
 	<td></td>
 	<td></td>
 	<td>DNC</td>
 	</tr>
 	<tr>
-	<td><b>Bermuda</b></td>
+	<td>Bermuda</td>
 	<td></td>
 	<td></td>
 	<td></td>
 	<td>DNC</td>
 	</tr>
 	<tr>
-	<td class="success"><b>Botswana</b></td>
+	<td class="success">Botswana</td>
 	<td class="success">1</td>
 	<td class="success">-</td>
 	<td class="success">3</td>
 	<td class="success">4</td>
 	</tr>
 	<tr>
-	<td><b>Brunei Darassalam</b></td>
+	<td>Brunei Darassalam</td>
 	<td></td>
 	<td></td>
 	<td></td>
 	<td>DNC</td>
 	</tr>
 	<tr>
-	<td class="success"><b>Cameroon</b></td>
+	<td class="success">Cameroon</td>
 	<td class="success">-</td>
 	<td class="success">2</td>
 	<td class="success">4</td>
 	<td class="success">6</td>
 	</tr>
 	<tr>
-	<td class="success"><b>Canada</b></td>
+	<td class="success">Canada</td>
 	<td class="success">26</td>
 	<td class="success">17</td>
 	<td class="success">33</td>
 	<td class="success">76</td>
 	</tr>
 	<tr>
-	<td class="success"><b>Cayman Islands</b></td>
+	<td class="success">Cayman Islands</td>
 	<td class="success">1</td>
 	<td class="success"></td>
 	<td class="success"></td>
 	<td class="success">1</td>
 	</tr>
 	<tr>
-	<td><b>Dominica</b></td>
+	<td>Dominica</td>
 	<td></td>
 	<td></td>
 	<td></td>
 	<td>DNC</td>
 	</tr>
 	<tr>
-	<td><b>Falkland Islands</b></td>
+	<td>Falkland Islands</td>
 	<td></td>
 	<td></td>
 	<td></td>
 	<td>DNC</td>
 	</tr>
 	<tr>
-	<td class="success"><b>Ghana</b></td>
+	<td class="success">Ghana</td>
 	<td class="success">-</td>
 	<td class="success">1</td>
 	<td class="success">-</td>
 	<td class="success">1</td>
 	</tr>
 	<tr>
-	<td><b>Grenada</b></td>
+	<td>Grenada</td>
 	<td></td>
 	<td></td>
 	<td></td>
 	<td>DNC</td>
 	</tr>
 	<tr>
-	<td class="success"><b>Guyana</b></td>
+	<td class="success">Guyana</td>
 	<td class="success">-</td>
 	<td class="success">1</td>
 	<td class="success">-</td>
 	<td class="success">1</td>
 	</tr>
 	<tr>
-	<td><b>Hong Kong</b></td>
+	<td>Hong Kong</td>
 	<td></td>
 	<td></td>
 	<td></td>
 	<td>DNC</td>
 	</tr>
 	<tr>
-	<td class="success"><b>India</b></td>
+	<td class="success">India</td>
 	<td class="success">38</td>
 	<td class="success">27</td>
 	<td class="success">36</td>
 	<td class="success">101</td>
 	</tr>
 	<tr>
-	<td class="success"><b>Jamaica</b></td>
+	<td class="success">Jamaica</td>
 	<td class="success">2</td>
 	<td class="success">4</td>
 	<td class="success">1</td>
 	<td class="success">7</td>
 	</tr>
 	<tr>
-	<td><b>Jersey</b></td>
+	<td>Jersey</td>
 	<td></td>
 	<td></td>
 	<td></td>
 	<td>DNC</td>
 	</tr>
 	<tr>
-	<td class="success"><b>Kenya</b></td>
+	<td class="success">Kenya</td>
 	<td class="success">12</td>
 	<td class="success">11</td>
 	<td class="success">9</td>
 	<td class="success">32</td>
 	</tr>
 	<tr>
-	<td><b>Losotho</b></td>
+	<td>Losotho</td>
 	<td></td>
 	<td></td>
 	<td></td>
 	<td>DNC</td>
 	</tr>
 	<tr>
-	<td><b>Malta</b></td>
+	<td>Malta</td>
 	<td></td>
 	<td></td>
 	<td></td>
 	<td>DNC</td>
 	</tr>
 	<tr>
-	<td><b>Montserrat</b></td>
+	<td>Montserrat</td>
 	<td></td>
 	<td></td>
 	<td></td>
 	<td>DNC</td>
 	</tr>
 	<tr>
-	<td class="success"><b>Northern Ireland</b></td>
+	<td class="success">Northern Ireland</td>
 	<td class="success">3</td>
 	<td class="success">3</td>
 	<td class="success">4</td>
 	<td class="success">10</td>
 	</tr>
 	<tr>
-	<td class="success"><b>Scotland</b></td>
+	<td class="success">Scotland</td>
 	<td class="success">9</td>
 	<td class="success">10</td>
 	<td class="success">7</td>
 	<td class="success">26</td>
 	</tr>
 	<tr>
-	<td class="success"><b>Wales</b></td>
+	<td class="success">Wales</td>
 	<td class="success">2</td>
 	<td class="success">7</td>
 	<td class="success">10</td>
 	<td class="success">19</td>
 	</tr>
 	</table>
+
+
+<script type="text/javascript">
+$(function(){
+    $(".dropdown-toggle").dropdown('toggle');
+});
+
+$('.dropdown-menu li a').click(function() {
+    alert($(this).text());
+});
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}bootstrap/css/bootstrap.min.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script type="text/javascript" src="{{STATIC_URL}}bootstrap/js/bootstrap.min.js"></script>
+
 	
 	{% endblock %}
 	

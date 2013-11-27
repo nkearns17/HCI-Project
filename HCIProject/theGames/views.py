@@ -66,3 +66,13 @@ def updateScot(request):
 	template = loader.get_template('theGames/updateScot.html')
 	context = RequestContext(request)
 	return HttpResponse(template.render(context))
+
+def updateCanada(request):
+	template = loader.get_template('theGames/updateCanada.html')
+	context = RequestContext(request)
+	return HttpResponse(template.render(context))
+
+def scotResults(request):
+	template = loader.get_template('theGames/scotResults.html')
+	context = RequestContext(request)
+	return HttpResponse(template.render(context))

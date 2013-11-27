@@ -4,10 +4,81 @@
 	{% extends 'theGames/base-bootstrap.html' %}
 	
 	{% block content %}
+
+<style type="text/css">
+.dropdown-menu ul {
+    float: left;
+    border-right: 1px solid black;
+    padding-right:20px;
+}
+.header{
+	color:black;
+	font-size:15px;
+}
+.table {
+font-size: 15px 
+}
+</style>
 	
-	<h2><u><center> The Results </center></u></h2>
+<h2><u><center> The Results </center></u></h2>
 	
-	The table below shows the current results for each country.<br><br>
+<font size="3">The table below shows the current results for all countries. If you would like to view results for a certain nation, please select using the button below:</font>
+
+<div class="well well-sm">
+<center>
+<div class="dropdown">
+  <button class="dropdown-toggle" data-toggle="dropdown" href="#"><font size="3">Select Your Nation</font></button>
+  <div class="dropdown-menu" role="menu">
+      <ul>
+          
+        <li><a class="header" href="#"><i><u>Africa</u></i></a></li>
+  <li><a href="#"> Botswana </a></li>
+  <li><a href="#"> Cameroon </a></li>
+  <li><a href="#"> Ghana </a></li>
+  <li><a href="#"> Kenya </a></li>
+  <li><a href="#"> Lesotho </a></li>
+  </ul><ul>
+  <li><a class="header" href="#"><i><u>Americas</u></i></a></li>
+  <li><a href="#"> Belize </a></li>
+  <li><a href="#"> Bermuda </a></li>
+  <li><a href="#"> Canada </a></li>
+  <li><a href="#"> Falkland Islands </a></li>
+  <li><a href="#"> Guyana </a></li>
+  </ul><ul>
+  <li><a class="header" href="#"><i><u>Asia</u></i></a></li>
+  <li><a href="#"> Aden </a></li>
+  <li><a href="#"> Bangladesh </a></li>
+  <li><a href="#"> Brunei Darussalam </a></li>
+  <li><a href="#"> Hong Kong </a></li>
+  <li><a href="#"> India </a></li>
+  </ul><ul>
+  <li><a class="header" href="#"><i><u>Caribbean</u></i></a></li>
+  <li><a href="#"> Cayman Islands </a></li>
+  <li><a href="#"> Dominica </a></li>
+  <li><a href="#"> Grenada </a></li>
+  <li><a href="#"> Jamaica </a></li>
+  <li><a href="#"> Montserrat </a></li>
+  </ul><ul>
+  <li><a class="header" href="#"><i><u>Europe</u></i></a></li>
+  <li><a href="#"> Jersey </a></li>
+  <li><a href="#"> Malta </a></li>
+  <li><a href="#"> Northern Ireland </a></li>
+  <li><a href="scotResults/"> Scotland </a></li>
+  <li><a href="#"> Wales </a></li>
+  </ul><ul>
+  <li><a class="header" href="#"><i><u>Oceania</u></i></a></li>
+  <li><a href="#"> New Zealand </a></li>
+  <li><a href="#"> Niue </a></li>
+  <li><a href="#"> Norfolk Island </a></li>
+  <li><a href="#"> Papua New Guinea </a></li>
+  <li><a href="#"> Samoa </a></li>
+  </ul><ul>
+      </ul>
+  </div>
+</div>
+</center>
+</div><br>
+
 	
 	<table class="table table-bordered table-condensed">
 	<tr>
@@ -193,6 +264,24 @@
 	<td class="success">19</td>
 	</tr>
 	</table>
+
+
+<script type="text/javascript">
+$(function(){
+    $(".dropdown-toggle").dropdown('toggle');
+});
+
+$('.dropdown-menu li a').click(function() {
+    alert($(this).text());
+});
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}bootstrap/css/bootstrap.min.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script type="text/javascript" src="{{STATIC_URL}}bootstrap/js/bootstrap.min.js"></script>
+
 	
 	{% endblock %}
 	

@@ -11,5 +11,6 @@ urlpatterns = patterns('',
 	url(r'^results', views.results, name='results'),
 	url(r'^updates', views.updates, name='updates'),
 	url(r'^selectCountry', views.selectCountry, name='selectCountry'),
-	url(r'^updatesScot', views.updatesScot, name='updatesScot'),
+	url(r'^updateScot', views.updateScot, name='updateScot'),
+	url(r'^updateCanada', views.updateCanada, name='updateCanada'),
 )
