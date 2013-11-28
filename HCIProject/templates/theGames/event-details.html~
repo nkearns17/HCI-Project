@@ -11,6 +11,72 @@
 		border-style:solid;
 		border-width:2px;
 	}
+#progress-bar1 {
+    width: 40%;
+    height: 20;
+    background: #0066FF;
+    text-align: center;
+    overflow: hidden;   
+}
+#progress-bar2 {
+    width: 0;
+    height: 20;
+    background: #0066FF;
+    text-align: center;
+    overflow: hidden;   
+}
+#progress-bar3 {
+    width: 0;
+    height: 20;
+    background: #0066FF;
+    text-align: center;
+    overflow: hidden;   
+}
+#progress-bar4 {
+    width: 0;
+    height: 20;
+    background: #0066FF;
+    text-align: center;
+    overflow: hidden;   
+}
+#progress-bar5 {
+    width: 0;
+    height: 20;
+    background: #0066FF;
+    text-align: center;
+    overflow: hidden;   
+}
+#progress-bar6 {
+    width: 0;
+    height: 20;
+    background: #0066FF;
+    text-align: center;
+    overflow: hidden;   
+}
+#progress-bar7 {
+    width: 0;
+    height: 20;
+    background: #0066FF;
+    text-align: center;
+    overflow: hidden;   
+}
+#progress-bar8 {
+    width: 0;
+    height: 20;
+    background: #0066FF;
+    text-align: center;
+    overflow: hidden;   
+}
+.vote{
+	width:60px;
+	font-size:15px;
+	font-style:italic;
+	background: #FFFFCC;
+	float:right;
+}
+.voting{
+	border:1px solid;
+}
 </style>
 
 <a href="/theGames/specificEvent/Athletics" class="btn btn-primary btn-large"><i class="icon-white icon-chevron-left"></i> Back to Events</a>
@@ -19,10 +85,10 @@
 
 <div class="details"><font size="3">
 <b> The next event is: Sunday 27/07/2014, 14:30 - 18:00</b><br>
-<b> The event is being held at:</b> <i> Hampden Park </i><br><br></font>
+<b> The event is being held at:</b> <i> Hampden Park </i><br></font>
+<div class="button" align="right"><a href="#" class="btn btn-success btn-large" >Get Directions</a></div><br>
 <div class="maps1"><center><img src="/static/HampdenMap.png" alt="Map" width="700" height="500" /></center></div><br>
 <div class="map2"><center><img src="/static/HciMap1.png" alt="Map" width="700" height="500" /></center></div><br>
-<div class="button" align="right"><a href="#" class="btn btn-success btn-large" >Get Directions</a></div><br>
 <div class="directions"><font size="2">
 <h5><u> Directions </u></h5>
 1. Head northwest on University Ave toward Byres Rd/B808 459 ft <br>
@@ -47,8 +113,136 @@
 <div class="Showbutton" align="right"><a href="#" class="btn btn-success btn-large" >Hide Directions</a></div><br>
 </div>
 
+
+<center><h4><u><i>Who do you think will win the mens 100m? Vote Now!</i></u></h5></center>
+
+<div class="voting">
+<font size="3">Lerone Ephraime Clarke</font><br>
+<button class="vote" onclick="increment1()">Vote</button>
+<div style="float:left;" id="progress-bar1"> .</div><br>
+
+<font size="3">Mark Lewis-Francis</font><br>
+<button class="vote" onclick="increment2()">Vote</button>
+<div style="float:left;" id="progress-bar2"> .</div><br>
+
+<font size="3">Aaron Armstrong</font><br>
+<button class="vote" onclick="increment3()">Vote</button>
+<div style="float:left;" id="progress-bar3"> .</div><br>
+
+<font size="3">Emmanuel Callender</font><br>
+<button class="vote" onclick="increment4()">Vote</button>
+<div style="float:left;" id="progress-bar4">. </div><br>
+
+<font size="3">Aaron Rouge-Serret</font><br>
+<button class="vote" onclick="increment5()">Vote</button>
+<div style="float:left;" id="progress-bar5"> .</div><br>
+
+<font size="3">Peter EMELEZIE</font><br>
+<button class="vote" onclick="increment6()">Vote</button>
+<div style="float:left;" id="progress-bar6"> .</div><br>
+
+<font size="3">Samuel Effah</font><br>
+<button class="vote" onclick="increment7()">Vote</button>
+<div style="float:left;" id="progress-bar7"> .</div><br>
+
+<font size="3">Oshane Andre Bailey</font><br>
+<button class="vote" onclick="increment8()">Vote</button>
+<div style="float:left;" id="progress-bar8">. </div><br>
+</div>
+
+<script>
+var progressBar1 = $('#progress-bar1'),
+    width1 = progressBar1.width();
+
+//progressBar1.width(width1);
+
+function increment1() {
+    width1 += 10;
+    progressBar1.css('width', width1 + '%');
+    progressBar1.css('height', '20px');
+}
+</script>
+
+<script>
+var progressBar2 = $('#progress-bar2'),
+    width2 = progressBar2.width();
+
+function increment2() {
+    width2 += 10;
+    progressBar2.css('width', width2 + '%');
+    progressBar2.css('height', '20px');
+}
+</script>
+
+<script>
+var progressBar3 = $('#progress-bar3'),
+    width3 = progressBar3.width();
+
+function increment3() {
+    width3 += 10;
+    progressBar3.css('width', width3 + '%');
+    progressBar3.css('height', '20px');
+}
+</script>
+
+<script>
+var progressBar4 = $('#progress-bar4'),
+    width4 = progressBar4.width();
+
+function increment4() {
+    width4 += 10;
+    progressBar4.css('width', width4 + '%');
+    progressBar4.css('height', '20px');
+}
+</script>
+
+<script>
+var progressBar5 = $('#progress-bar5'),
+    width5 = progressBar5.width();
+
+function increment5() {
+    width5 += 10;
+    progressBar5.css('width', width5 + '%');
+    progressBar5.css('height', '20px');
+}
+</script>
+
+<script>
+var progressBar6 = $('#progress-bar6'),
+    width6 = progressBar6.width();
+
+function increment6() {
+    width6 += 10;
+    progressBar6.css('width', width6 + '%');
+    progressBar6.css('height', '20px');
+}
+</script>
+
+<script>
+var progressBar7 = $('#progress-bar7'),
+    width7 = progressBar7.width();
+
+function increment7() {
+    width7 += 10;
+    progressBar7.css('width', width7 + '%');
+    progressBar7.css('height', '20px');
+}
+</script>
+
+<script>
+var progressBar8 = $('#progress-bar8'),
+    width8 = progressBar8.width();
+
+function increment8() {
+    width8 += 10;
+    progressBar8.css('width', width8 + '%');
+    progressBar8.css('height', '20px');
+}
+</script>
+
 <script>
 
+$(".maps1").hide();
 $(".map2").hide();
 $(".directions").hide();
 $(".Showbutton").hide();
@@ -63,45 +257,13 @@ $(".button").click(function(){
 $(".Showbutton").click(function(){
 	$(".directions").hide();
 	$(".Showbutton").hide();
+	$(".maps1").hide();
+	$(".map2").hide();
 	$(".button").show();
 });
 
 </script>
 
-<br>
-<font size="2">
-<input type="radio" name="country" value="africa"><strong> Africa</strong>
-<div class="progress progress-striped">
-  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-  </div>
-</div>
-<input type="radio" name="country" value="americas"><strong> Americas</strong>
-<div class="progress progress-striped">
-  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%">
-  </div>
-</div>
-<input type="radio" name="country" value="asia"><strong> Asia</strong>
-<div class="progress progress-striped">
-  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%">
-  </div>
-</div>
-<input type="radio" name="country" value="caribbean"><strong> Caribbean</strong>
-<div class="progress progress-striped">
-  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%">
-  </div>
-</div>
-<input type="radio" name="country" value="europe"><strong> Europe</strong>
-<div class="progress progress-striped">
-  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%">
-  </div>
-</div>
-<input type="radio" name="country" value="oceania"><strong> Oceania</strong>
-<div class="progress progress-striped">
-  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-  </div>
-</div>
-<div class="vote"><a href="#" class="btn btn-large btn-success">Vote</a></div>
-</font>
 <script>
 
 $(".vote").click(function(){
