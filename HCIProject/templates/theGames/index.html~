@@ -5,11 +5,10 @@
 
 {% block content %}
 
-	<h1> HCI4 Assessed Exercise</h1>
-	Commonwealth Games application <br />
-	<img src="/static/cwg.jpg" alt="Picture" /> 
-
-	
-	
+	<center><h1> Glasgow 2014</h1>
+	<h1> Commonwealth Games</h1>
+	Follow your Nation <br/></center>
+	<center><img src="/static/cwg.jpg" alt="Picture" /> </center>	
+	<p align="right"><font size="1">http://www.bbc.co.uk/scotland/img/aboutus/glasgow2014/hands_on_hips_640x395.jpg</font></p>
 {% endblock %}
 </html>

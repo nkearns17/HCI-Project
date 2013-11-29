@@ -19,6 +19,7 @@
 	font-size:15px;
 }
 </style>
+<a href="/theGames/updates/" class="btn btn-primary btn-large"><i class="icon-white icon-chevron-left"></i> Back to All Updates</a>
 
 <center><u><h3> Updates </h3></u></center>
 
@@ -42,7 +43,7 @@
   <li><a class="header" href="#"><i><u>Americas</u></i></a></li>
   <li><a href="#"> Belize </a></li>
   <li><a href="#"> Bermuda </a></li>
-  <li><a href="updateCanada/"> Canada </a></li>
+  <li><a href="/theGames/updateCanada/"> Canada </a></li>
   <li><a href="#"> Falkland Islands </a></li>
   <li><a href="#"> Guyana </a></li>
   </ul><ul>
@@ -80,7 +81,8 @@
 </center>
 </div>
 
-<h3>Updates</h5>
+<h3>Scotland Updates</h3>
+
 <table class="table table-condensed">
 <tr>
 	<td class="success" height="15%" width="20%"><img src="/static/tick.png" width="10%" height="5%"></td>
@@ -95,8 +97,6 @@
 	<td class="success"> Senga just completed the triathlon! You go girl </td>
 </tr>
 </table>
-
-</div>
 
 
 <script type="text/javascript">

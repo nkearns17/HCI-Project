@@ -11,12 +11,58 @@
 	{% if events_list %}
 		<UL>
 		{% for event in events_list %}
-			<a href="/theGames/details/" class="btn btn-info btn-large">{{event.title}} </a>
+			<audio id={{event.title}} src="/static/courseWorkRecordings/{{event.title}}+".MP3"></audio>
+<button onclick="location.href='/theGames/details/';" onmouseover="document.getElementById('{{event.title}}').play()" onmouseout="document.getElementById('{{event.title}}').pause()">{{event.title}}</button> <div class="divider"></div> 
 		{% endfor %}
 		</UL>
 	{% endif %}
 	</div>
+<style type="text/css">
+.divider{
+    width:20px;
+    height:auto;
+    display:inline-block;
+}
+button{
+	width:150px;
+}
+</style>
 
+
+<div class="btn-group">
+<audio id="100m" src="/static/courseWorkRecordings/100m.MP3"></audio>
+<button onclick="location.href='/theGames/details/';" onmouseover="document.getElementById('100m').play()" onmouseout="document.getElementById('100m').pause()">100m</button> <div class="divider"></div>
+
+
+<audio id="200m" src="/static/courseWorkRecordings/200m.MP3"></audio>
+<button onclick="location.href='/theGames/details/';" onmouseover="document.getElementById('200m').play()" onmouseout="document.getElementById('200m').pause()">200m</button> <div class="divider"></div>
+
+
+<audio id="400m" src="/static/courseWorkRecordings/400m.MP3"></audio>
+<button onclick="location.href='/theGames/details/';" onmouseover="document.getElementById('400m').play()" onmouseout="document.getElementById('400m').pause()">400m</button> <div class="divider"></div>
+
+
+<audio id="LongJump" src="/static/courseWorkRecordings/LongJump.MP3"></audio>
+<button onclick="location.href='/theGames/details/';" onmouseover="document.getElementById('LongJump').play()" onmouseout="document.getElementById('LongJump').pause()">LongJump</button> <div class="divider"></div>		
+<br><br>
+
+<audio id="HighJump" src="/static/courseWorkRecordings/HighJump.MP3"></audio>
+<button onclick="location.href='/theGames/details/';" onmouseover="document.getElementById('HighJump').play()" onmouseout="document.getElementById('HighJump').pause()">HighJump</button> <div class="divider"></div>
+
+
+<audio id="TripleJump" src="/static/courseWorkRecordings/TripleJump.MP3"></audio>
+<button onclick="location.href='/theGames/details/';" onmouseover="document.getElementById('TripleJump').play()" onmouseout="document.getElementById('TripleJump').pause()">TripleJump</button> <div class="divider"></div>
+
+
+<audio id="Javelin" src="/static/courseWorkRecordings/Javelin.MP3"></audio>
+<button onclick="location.href='/theGames/details/';" onmouseover="document.getElementById('Javelin').play()" onmouseout="document.getElementById('Javelin').pause()">Javelin</button> <div class="divider"></div>
+</div>
+
+
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}bootstrap/css/bootstrap.min.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script type="text/javascript" src="{{STATIC_URL}}bootstrap/js/bootstrap.min.js"></script>
 {% endblock %}
 
 </html>
