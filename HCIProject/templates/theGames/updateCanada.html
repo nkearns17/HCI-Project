@@ -18,8 +18,16 @@ o<!DOCTYPE html>
 	color:black;
 	font-size:15px;
 }
+.backButton{
+	font-size:15px;
+	background-color:#00CCFF;
+	width:150px;
+	height:40px;
+}
 </style>
-<a href="/theGames/updates/" class="btn btn-primary btn-large"><i class="icon-white icon-chevron-left"></i> Back to All Updates</a>
+
+<audio id="Back" src="/static/courseWorkRecordings/Back.MP3"></audio>
+<button class="backButton" onclick="location.href='/theGames/updates/';" onmouseover="document.getElementById('Back').play()" onmouseout="document.getElementById('Back').pause()"> < Back to Updates</button> <div class="divider"></div>
 
 <center><u><h2> Updates </h2></u></center>
 

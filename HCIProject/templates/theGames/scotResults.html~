@@ -22,11 +22,18 @@ font-size: 15px
 font-size:20px;
 }
 .warning{
-	font-size:25px;
+	font-size:22px;
+}
+.backButton{
+	font-size:15px;
+	background-color:#00CCFF;
+	width:150px;
+	height:40px;
 }
 </style>
 
-<a href="/theGames/results/" class="btn btn-primary btn-large"><i class="icon-white icon-chevron-left"></i> Back to All Results</a>
+<audio id="Back" src="/static/courseWorkRecordings/Back.MP3"></audio>
+<button class="backButton" onclick="location.href='/theGames/results/';" onmouseover="document.getElementById('Back').play()" onmouseout="document.getElementById('Back').pause()"> < Back to Events</button> <div class="divider"></div>
 
 <h2><u><center> The Results </center></u></h2>
 	

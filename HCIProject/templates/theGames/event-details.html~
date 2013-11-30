@@ -19,7 +19,7 @@
     overflow: hidden;   
 }
 #progress-bar2 {
-    width: 0;
+    width: 10%;
     height: 20;
     background: #0066FF;
     text-align: center;
@@ -33,7 +33,7 @@
     overflow: hidden;   
 }
 #progress-bar4 {
-    width: 0;
+    width: 20%;
     height: 20;
     background: #0066FF;
     text-align: center;
@@ -54,14 +54,14 @@
     overflow: hidden;   
 }
 #progress-bar7 {
-    width: 0;
+    width: 60%;
     height: 20;
     background: #0066FF;
     text-align: center;
     overflow: hidden;   
 }
 #progress-bar8 {
-    width: 0;
+    width: 30%;
     height: 20;
     background: #0066FF;
     text-align: center;
@@ -77,16 +77,24 @@
 .voting{
 	border:1px solid;
 }
+.backButton{
+	font-size:15px;
+	background-color:#00CCFF;
+	width:150px;
+	height:40px;
+}
 </style>
 
-<a href="/theGames/specificEvent/Athletics" class="btn btn-primary btn-large"><i class="icon-white icon-chevron-left"></i> Back to Events</a>
+
+<audio id="Back" src="/static/courseWorkRecordings/Back.MP3"></audio>
+<button class="backButton" onclick="location.href='/theGames/specificEvent/Athletics';" onmouseover="document.getElementById('Back').play()" onmouseout="document.getElementById('Back').pause()"> < Back to Events</button> <div class="divider"></div>
 
 <h2><center><u>Event Details </u></center> </h2><br>
 
 <div class="details"><font size="3">
 <b> The next event is: Sunday 27/07/2014, 14:30 - 18:00</b><br>
 <b> The event is being held at:</b> <i> Hampden Park </i><br></font>
-<div class="button" align="right"><a href="#" class="btn btn-success btn-large" >Get Directions</a></div><br>
+<div class="button" align="right"><a href="#" class="btn btn-success btn-large" >Get Directions</a></div>
 <div class="maps1"><center><img src="/static/HampdenMap.png" alt="Map" width="700" height="500" /></center></div><br>
 <div class="map2"><center><img src="/static/HciMap1.png" alt="Map" width="700" height="500" /></center></div><br>
 <div class="directions"><font size="2">
@@ -272,6 +280,11 @@ $(".vote").click(function(){
 });
 
 </script>
+
+<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}bootstrap/css/bootstrap.min.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script type="text/javascript" src="{{STATIC_URL}}bootstrap/js/bootstrap.min.js"></script>
 
 {% endblock %}
 

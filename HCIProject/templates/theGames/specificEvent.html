@@ -4,7 +4,8 @@
 
 {% block content %}
 
-<a href="/theGames/events/" class="btn btn-primary btn-large"><i class="icon-white icon-chevron-left"></i> Back to Events</a>
+<audio id="Back" src="/static/courseWorkRecordings/Back.MP3"></audio>
+<button class="backButton" onclick="location.href='/theGames/events/';" onmouseover="document.getElementById('Back').play()" onmouseout="document.getElementById('Back').pause()"> < Back to Events</button> <div class="divider"></div>
 
 <center><h2><u>{{ev_name}}</u></h2></center><br>
 
@@ -16,6 +17,12 @@
 }
 button{
 	width:150px;
+}
+.backButton{
+	font-size:15px;
+	background-color:#00CCFF;
+	width:150px;
+	height:40px;
 }
 </style>
 
