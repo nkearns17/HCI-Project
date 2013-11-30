@@ -4,19 +4,10 @@
 
 {% block content %}
 
-	<a href="/theGames/events/" class="btn btn-primary btn-large"><i class="icon-white icon-chevron-left"></i> Back to Events</a>
+<a href="/theGames/events/" class="btn btn-primary btn-large"><i class="icon-white icon-chevron-left"></i> Back to Events</a>
 
-	<center><h2><u>{{ev_name}}</u></h2></center><br>
-	<div class="btn-group ">
-	{% if events_list %}
-		<UL>
-		{% for event in events_list %}
-			<audio id={{event.title}} src="/static/courseWorkRecordings/{{event.title}}+".MP3"></audio>
-<button onclick="location.href='/theGames/details/';" onmouseover="document.getElementById('{{event.title}}').play()" onmouseout="document.getElementById('{{event.title}}').pause()">{{event.title}}</button> <div class="divider"></div> 
-		{% endfor %}
-		</UL>
-	{% endif %}
-	</div>
+<center><h2><u>{{ev_name}}</u></h2></center><br>
+
 <style type="text/css">
 .divider{
     width:20px;
@@ -27,7 +18,6 @@ button{
 	width:150px;
 }
 </style>
-
 
 <div class="btn-group">
 <audio id="100m" src="/static/courseWorkRecordings/100m.MP3"></audio>
@@ -56,13 +46,13 @@ button{
 
 <audio id="Javelin" src="/static/courseWorkRecordings/Javelin.MP3"></audio>
 <button onclick="location.href='/theGames/details/';" onmouseover="document.getElementById('Javelin').play()" onmouseout="document.getElementById('Javelin').pause()">Javelin</button> <div class="divider"></div>
-</div>
-
+</div> 
 
 <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}bootstrap/css/bootstrap.min.css">
 <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
 <script src="http://code.jquery.com/jquery.js"></script>
 <script type="text/javascript" src="{{STATIC_URL}}bootstrap/js/bootstrap.min.js"></script>
+
 {% endblock %}
 
 </html>
